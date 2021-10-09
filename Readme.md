@@ -1,0 +1,1 @@
+hiera5 is dependent on golang version > 1.15
