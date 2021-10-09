@@ -1,0 +1,13 @@
+version: 5
+defaults:  # Used for any hierarchy level that omits these keys.
+  datadir: hieradata         # This path is relative to hiera.yaml's directory.
+  data_hash: yaml_data  # Use the built-in YAML backend.
+
+hierarchy:
+  - name: "service/%{service}"
+    path: "service/%{service}.yaml"
+  - name: "enviroment"
+    path: "environment/%{environment}.yaml"
+  - name: "common"
+    path: "common.yaml"
+  

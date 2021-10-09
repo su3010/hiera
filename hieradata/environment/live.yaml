@@ -1,0 +1,7 @@
+---
+aws_cloudwatch_enable: true
+aws_tags:
+  tier: 1
+java_opts:
+  - '-Dspring.profiles.active=live'
+enable_spot_instances: true
