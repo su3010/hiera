@@ -14,8 +14,8 @@ provider "hiera5" {
   config = "hiera.yaml"
   # Optional
   scope = {
-    environment = "live"
-    service     = "api"
+    environment = var.fact.environment
+    role     = var.fact.role
     # Complex variables are supported using pdialect
     facts       = "{timezone=>'CET'}"
   }
@@ -27,6 +27,7 @@ provider "hiera5" {
 data "hiera5_array" "java_opts" {
   key = "java_opts"
 }
+
 
 output "array_test" {
   value = data.hiera5_array.java_opts

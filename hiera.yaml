@@ -4,8 +4,8 @@ defaults:  # Used for any hierarchy level that omits these keys.
   data_hash: yaml_data  # Use the built-in YAML backend.
 
 hierarchy:
-  - name: "service/%{service}"
-    path: "service/%{service}.yaml"
+  - name: "role"
+    path: "role/%{role}.yaml"
   - name: "enviroment"
     path: "environment/%{environment}.yaml"
   - name: "common"

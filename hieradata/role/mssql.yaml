@@ -1,0 +1,9 @@
+---
+aws_instance_size: t2.large
+aws_tags:
+  team: A
+java_opts:
+  - '-Xms512m'
+  - '-Xmx2g'
+  - '-MSSQL'
+enable_spot_instances: false
